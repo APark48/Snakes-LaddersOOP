@@ -10,6 +10,7 @@ void Game::startGame(){
     int playerTurn = 0;
     do
     {
+       //Always reset selection to 0
         selection = 0;
         playerTurn +=1;
         playerRoll = d->roll();
@@ -26,7 +27,8 @@ void Game::startGame(){
         if (player1 >= 50){
             break;
         }
-
+    
+        //Player turn end and continue input
         std::cout << "Turn ended, you are currently in " << player1 << " position." << std::endl;
         std::cout << "Enter 1 to continue or 2 to end game." << std::endl;
         while (selection != 1 || 2){
@@ -39,6 +41,7 @@ void Game::startGame(){
         }
 
         if (selection == 1) {
+            //Selection assigned to 0 again
             selection = 0;
             playerTurn +=1;
             playerRoll = d->roll();
@@ -56,10 +59,12 @@ void Game::startGame(){
                 break;
             }
         }
+        //Computer turn end and continue input
         std::cout << "Computer has ended his turn and is currently on " << player2 << " position." << std::endl;
         std::cout << "Enter 1 to continue or 2 to end game." << std::endl;
         std::cin >> selection;
 
+        //Win conditions
         if (player1 >= 50){
             std::cout << "You WON!" << std::endl;
         } else if (player2 >= 50){
