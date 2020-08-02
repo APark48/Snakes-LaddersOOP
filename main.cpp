@@ -1,5 +1,4 @@
 #include <iostream>
-#include "Dice.h"
 #include "Game.h"
 
 void display(){
@@ -22,6 +21,8 @@ int main(){
             break;
         case 0:
             std::cout << "Game exited successfully." << std::endl;
+            Game g;
+            g.startGame();
             break;
         default:
             std::cout << "Invalid input." << std::endl;
@@ -29,7 +30,5 @@ int main(){
         }
     } while (select != 0);
     
-    //Game g;
-    //g.startGame();
     return 0;
 }
