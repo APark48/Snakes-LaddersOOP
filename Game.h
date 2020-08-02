@@ -1,4 +1,5 @@
 #pragma once
+#include "Dice.h"
 
 class Game{
 private:
