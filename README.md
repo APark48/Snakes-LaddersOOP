@@ -1,3 +1,4 @@
 # Snakes-LaddersOOP
-# Yes
+Creating the famous game "Snakes and Ladders" using Object Oriented Programming.
+Very simple stuff.
 
